@@ -98,7 +98,7 @@ The workbook `coffeeOrdersProject.xlsx` contains 7 sheets.
 
 ## How to Open the Project
 
-1. Download `coffeeOrdersProject.xlsx`.
+1. Download `coffeeOrdersData.xlsx`.
 2. Open it with **Microsoft Excel 2021 or Microsoft 365**. The `XLOOKUP` function is not available in Excel 2019 or earlier.
 3. Go to the **Dashboard** sheet and use the Slicers (Size, Roast Type Name, Loyalty Card) and the Order Date Timeline to filter the data.
 4. If the PivotTables do not update after editing the data, select **Data → Refresh All**.
@@ -108,9 +108,9 @@ The workbook `coffeeOrdersProject.xlsx` contains 7 sheets.
 ```
 coffee-sales-analysis-excel/
 ├── README.md
-├── coffeeOrdersProject.xlsx
-└── images/
-    └── dashboard.png
+├── coffeeOrdersData.xlsx
+└── coffee-sales-dashboard.png
+    
 ```
 
 ## Contact
