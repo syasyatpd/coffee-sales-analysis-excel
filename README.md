@@ -2,7 +2,7 @@
 
 Sales analysis of coffee orders from January 2019 to August 2022, built in Microsoft Excel. The project covers a three-table data model, formula-driven sales calculations, PivotTables, and an interactive dashboard with Slicers and a Timeline.
 
-![Dashboard](images/dashboard.png)
+![Dashboard](coffee-sales-dashboard.png)
 
 ## Project Overview
 
