@@ -12,9 +12,6 @@ Sales analysis of coffee orders from January 2019 to August 2022, built in Micro
 | **Order lines** | 1,000 (957 unique Order IDs) |
 | **Customers with orders** | 913 of 1,000 registered customers |
 | **Products** | 48 SKUs (4 coffee types × 3 roast types × 4 sizes) |
-| **Units sold** | 3,551 |
-| **Total sales** | **$45,134.26** |
-| **Average order value** | $47.16 |
 
 ## Business Questions
 
@@ -37,25 +34,6 @@ The workbook `coffeeOrdersData.xlsx` contains 7 sheets.
 | **customers** | 1,000 customers: ID, name, email, phone, address, city, country, postcode, loyalty card status |
 | **products** | 48 products: Product ID, coffee type, roast type, size, unit price, price per 100 g, profit |
 
-### Orders Table Structure
-
-| Column | Source |
-|---|---|
-| Order ID, Order Date, Customer ID, Product ID, Quantity | Raw data |
-| Customer Name, Email, Country, Loyalty Card | `XLOOKUP` against the `customers` sheet by Customer ID |
-| Coffee Type, Roast Type, Size, Unit Price | `INDEX` + `MATCH` against the `products` sheet by Product ID |
-| Sales | `Unit Price × Quantity` |
-| Coffee Type Name, Roast Type Name | Nested `IF` converting codes (Ara, Rob, Exc, Lib; L, M, D) into full names |
-
-## Analysis Process
-
-| Stage | Activity |
-|---|---|
-| **1. Data modeling** | Linked `orders`, `customers`, and `products` through key columns (Customer ID, Product ID) |
-| **2. Derived columns** | Calculated Sales and converted coffee and roast codes into full names |
-| **3. Analysis** | Built three PivotTables: sales by year/month per coffee type, sales by country, and Top 5 customers |
-| **4. Visualization** | Created the *Total Sales Over Time* line chart, the *Sales By Country* bar chart, and the *Top 5 Customers* bar chart |
-| **5. Interactivity** | Added Slicers (Size, Roast Type Name, Loyalty Card) and a Timeline (Order Date) connected to all PivotTables |
 
 ## Excel Features Used
 
@@ -95,23 +73,6 @@ The workbook `coffeeOrdersData.xlsx` contains 7 sheets.
 - 2022 data ends on August 19, 2022, so 2022 is not comparable with the full years.
 - Email is empty for 204 customers and Phone Number is empty for 130 customers. This does not affect sales calculations.
 - Profit is calculated from the `Profit` column in the `products` sheet multiplied by Quantity. Operating costs are not available, so the analysis focuses on revenue and per-product profit.
-
-## How to Open the Project
-
-1. Download `coffeeOrdersData.xlsx`.
-2. Open it with **Microsoft Excel 2021 or Microsoft 365**. The `XLOOKUP` function is not available in Excel 2019 or earlier.
-3. Go to the **Dashboard** sheet and use the Slicers (Size, Roast Type Name, Loyalty Card) and the Order Date Timeline to filter the data.
-4. If the PivotTables do not update after editing the data, select **Data → Refresh All**.
-
-## Repository Structure
-
-```
-coffee-sales-analysis-excel/
-├── README.md
-├── coffeeOrdersData.xlsx
-└── coffee-sales-dashboard.png
-    
-```
 
 ## Contact
 
