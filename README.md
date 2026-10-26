@@ -25,7 +25,7 @@ Sales analysis of coffee orders from January 2019 to August 2022, built in Micro
 
 ## Dataset
 
-The workbook `coffeeOrdersProject.xlsx` contains 7 sheets.
+The workbook `coffeeOrdersData.xlsx` contains 7 sheets.
 
 | Sheet | Content |
 |---|---|
